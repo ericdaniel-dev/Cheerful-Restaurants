@@ -1,0 +1,98 @@
+html{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root{
+	--bg1: #F2E3DB;
+	--bg2: #D9D9D9;
+	--bg-white: #FFFFFF;
+	--bg-orange: #E86A33;
+	--font-color1: #41644A;
+	--font-color2: #263A29;
+}
+
+body{
+	background-color: var(--bg1);
+}
+#container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#container > header, #container > div, #container > footer{
+		width: 90vw;
+}
+header{
+	border: 1px solid black;
+	height: 50px;
+	color: var(--font-color1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header div, header span{
+	display: inline-block;
+	font-size: 22px;
+}
+header a{
+	text-decoration: none;
+	color: var(--font-color1);
+}
+header #welcome{
+	margin-left: 80px;
+}
+header #navbar{
+	margin-right: 80px;
+	padding: 10px;
+}
+#introduction{
+	border: 1px solid black;
+	height: 518px;
+	background-image: url("./assets/Dish Backgrounds.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+}
+.intro{
+	width: 493px;
+	height: 207px;
+	padding: 10px;
+	display: inline-block;
+	margin-left: 40px;
+	text-align: center;
+}
+.intro h2{
+	color: var(--font-color1);
+	font-size: 27px;
+	text-decoration: underline;
+}
+.intro p{
+	color: var(--font-color2);
+	font-size: 22px;
+}
+.intro button{
+	padding: 10px 20px;
+	border-radius: 15px;
+}
+.intro #order{
+	background-color: var(--bg-white);
+}
+.intro #visit{
+	background-color: var(--bg-orange);
+}
+#greetings{
+	border: 1px solid black;
+	height: 456px;
+	background-color: var(--bg2);
+}
+#menu{
+	border: 1px solid black;
+	height: 804px;
+	background-color: var(--bg2);
+}
+footer{
+	border: 1px solid black;
+	height: 207px;
+}

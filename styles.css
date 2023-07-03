@@ -13,7 +13,6 @@ html{
 	--font-color1: #41644A;
 	--font-color2: #263A29;
 }
-
 body{
 	background-color: var(--bg-pink);
 }
@@ -21,6 +20,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 #container > header, #container > div, #container > footer{
 		width: 90vw;
@@ -49,11 +49,12 @@ header #navbar{
 	padding: 10px;
 }
 #introduction{
-	height: 518px;
+	height: 618px;
 	background-image: url("./assets/Dish Backgrounds.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
+	position: relative;
 	align-items: center;
 }
 .intro{
@@ -83,9 +84,31 @@ header #navbar{
 .intro #visit{
 	background-color: var(--bg-orange);
 }
+#food-drink-dessert{
+	background-color: var(--bg-white);
+	border-radius: 10px;
+	display: flex;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+  	transform: translateX(-50%);
+	align-items: center;
+	justify-content: space-evenly;
+	width: 180px;
+	height: 30px;
+	padding: 15px;
+	margin-top: 250px;
+}
+#food-drink-dessert:hover{
+	background-color: grey;
+}
+#food-drink-dessert img{
+	width: 30px;
+	height: 30px;
+}
+
 #greetings{
-	
-	height: 456px;
+	height: auto;
 	background-color: var(--bg-blue);
 	display: flex;
 	flex-direction: column;
@@ -105,16 +128,13 @@ header #navbar{
 #greetings h3{
 	text-align: center;
 }
-#greetings p{
-	width: 50%;
-}
 #owner{
 	display: flex;
 	width: 80vw;
-	height: 441px;
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
+	position: relative;
 	border-bottom: 1px solid black;
 }
 #owner div{
@@ -125,16 +145,63 @@ header #navbar{
 }
 #owner-img{
 	width: 30%;
-	height: 241px;
+	height: auto;
 	border-radius: 20%;
 }
 #owner-img img{
-	width: 220px;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;	
 }
+#our-menu{
+	background-color: var(--bg-blue);
+}
+.menu{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+	height: 684px;
+}
+.foods {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: lightblue;
+}
+.food-image{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+}
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.drinks {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: lightyellow;
+}
+.drink-image, .dessert-image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.drink-image img, .dessert-image img{
+	width: 30%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.desserts {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: lightgreen;
+}
 footer{
-	height: 167px;
 	background-color: var(--bg-blue);
 	display: flex;
 	justify-content: space-between;
@@ -159,4 +226,98 @@ footer{
 #social-media img{
 	width: 30px;
 	height: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	#container{
+		overflow: hidden;
+	}
+	p{
+		font-size: 18px;
+		text-align: justify;
+	}
+	header{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	#introduction{
+		align-items: center;
+		justify-content: center;
+	}
+	#navbar {
+    	flex-direction: column;
+  	}
+	.menu{
+		display: flex;
+		flex-direction: column;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#owner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 80vw;
+	}
+	#owner-img{
+		width: 50vw;
+		padding: 10px;
+	}
+	#owner-says{	
+		width: 80vw;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	#container{
+		overflow: hidden;
+	}
+	p{
+		font-size: 18px;
+		text-align: justify;
+	}
+	header{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	#introduction{
+		align-items: center;
+		justify-content: center;
+	}
+	#navbar {
+    	flex-direction: column;
+  	}
+	.menu{
+		display: flex;
+		flex-direction: column;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#owner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 80vw;
+	}
+	#owner-img{
+		width: 50vw;
+		padding: 10px;
+	}
+	#owner-says{	
+		width: 80vw;
+		padding: 10px;
+	}
 }
